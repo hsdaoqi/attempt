@@ -9,16 +9,16 @@ void bubble(int arr[],int sz)
     {
       if(arr[j]>arr[j+i])
       {
-      int tmp=arr[i];
-      arr[i]=arr[i+1];
-      arr[i+1]=tmp;
+      int tmp=arr[j];
+      arr[j]=arr[j+1];
+      arr[j+1]=tmp;
       }
     }
   }
 }
 int main(){
 int arr[]={9,8,7,6,5,4,3,2,1};
-int i,n;
+int i;
 int sz=sizeof(arr[])/sizeof(arr[0]);
 bubble(arr,sz);
 for(i=0;i<sz;i++)
