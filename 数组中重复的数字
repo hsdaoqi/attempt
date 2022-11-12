@@ -14,3 +14,17 @@
    }
    return -1;
 }
+//////////////////////////////////////////////////////////////
+//第二种
+int arr[numbersLen], ans;
+    memset(arr, 0, numbersLen * sizeof(int));
+
+    for (int i = 0; i < numbersLen; ++i) {
+        arr[number[i]]++;
+        if (arr[number[i]] > 1) {
+            ans = number[i];
+            break;
+        }
+    }
+    return ans;
+}
