@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+	int main() {
+		int n = 0, i = 0;
+		for (n = 1; n < 100000; n++)
+		{
+			int ret = 0, sum = 0;
+			int count = 0;
+			i = n;
+			while (i)
+			{
+				i = i / 10;
+				count++;
+			}
+			i = n;
+			while (i)
+			{
+				ret = pow(i % 10, count);
+				sum = ret + sum;
+				i = i / 10;
+			}
+			if (sum ==n)
+			{
+				printf("%d ",n);
+			}
+		}
+		return 0;
+	}
