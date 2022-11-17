@@ -1,0 +1,49 @@
+#include <stdio.h> 
+ int main() {
+	int n = 0;
+	scanf("%d", &n);
+	int i = 0, ret1 = 1, ret2 = 1;
+	int j = 0, tmp = n, sums = 1;
+	if (n % 2 == 0)
+	{
+		while (tmp / 2 >= 1)
+		{
+			ret1 = 1;
+			ret2 = 1;
+			for (i = tmp / 2; i >= 1; i--)
+			{
+				ret1 = ret1 * i;
+			}
+			for (i = 1; i <= (tmp/2); i++)
+			{
+				ret2 = ret2 * (n/2-i+1);
+			}
+			tmp -= 2;
+			n += 2;
+			j = ret2 / ret1;
+			sums = sums + j;
+		}
+
+	}
+   else
+	{
+		while (tmp / 2 >= 1)
+		{
+			ret1 = 1;
+			ret2 = 1;
+			for (i = tmp / 2; i >= 1; i--)
+			{
+				ret1 = ret1 * i;
+			}
+			for (i = 1; i <= (tmp/2); i++)
+			{
+				ret2 = ret2 * (n/2-i+2);
+			}
+			tmp -= 2;
+			n += 2;
+			j = ret2 / ret1;
+			sums = sums + j;
+		}
+	printf("%d", sums);
+	return 0;
+}
